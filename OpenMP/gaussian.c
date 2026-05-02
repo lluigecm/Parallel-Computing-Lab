@@ -1,6 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "gaussian.h"
 
+
+static const float KERNEL[3][3] = {
+    {1, 2, 1},
+    {2, 4, 2},
+    {1, 2, 1}
+};
+
+#define KERNEL_SUM 16.0f
 
 
 float* alloc_img(int height, int width) {
@@ -11,4 +20,41 @@ float* alloc_img(int height, int width) {
         exit(1);
     }
     return img;
+}
+
+
+void init_img(float* img, int height, int width) {
+    for (int i = 0; i < height * width; i++) {
+        img[i] = rand() % 256; // Valores entre 0 e 255
+    }
+}
+
+
+void gaussian_blur(float* src, float* dst, int height, int width) {
+
+    // Copia as bordas sem alteração
+    for (int i = 0; i < width; i++) {
+        dst[0 * width + i] = src[0 * width + i]; // Copia bordas
+
+        dst[(height - 1) * width + i] = src[(height - 1) * width + i];
+    }
+
+    for (int j = 0; j < height; j++) {
+        dst[j * width + 0] = src[j * width + 0]; // Copia bordas
+
+        dst[j * width + (width - 1)] = src[j * width + (width - 1)];
+    }
+
+    // Aplica o filtro gaussiano para os pixels internos
+    for (int i = 1; i < height - 1; i++) {
+        for (int j = 1; j < width - 1; j++) {
+            float sum = 0.0f;
+            for (int k = -1; k <= 1; k++) {
+                for (int l = -1; l <= 1; l++) {
+                    sum += src[(i + k) * width + (j + l)] * KERNEL[k + 1][l + 1];
+                }
+            }
+            dst[i * width + j] = sum / KERNEL_SUM;
+        }
+    }
 }
