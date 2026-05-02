@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 #include "gaussian.h"
 
 
@@ -30,7 +31,7 @@ void init_img(float* img, int height, int width) {
 }
 
 
-void gaussian_blur(float* src, float* dst, int height, int width) {
+void gaussian_blur_serial(float* src, float* dst, int height, int width) {
 
     // Copia as bordas sem alteração
     for (int i = 0; i < width; i++) {
@@ -46,6 +47,35 @@ void gaussian_blur(float* src, float* dst, int height, int width) {
     }
 
     // Aplica o filtro gaussiano para os pixels internos
+    for (int i = 1; i < height - 1; i++) {
+        for (int j = 1; j < width - 1; j++) {
+            float sum = 0.0f;
+            for (int k = -1; k <= 1; k++) {
+                for (int l = -1; l <= 1; l++) {
+                    sum += src[(i + k) * width + (j + l)] * KERNEL[k + 1][l + 1];
+                }
+            }
+            dst[i * width + j] = sum / KERNEL_SUM;
+        }
+    }
+}
+
+
+void gaussian_blur_openmp(float* src, float* dst, int height, int width) {
+
+    // Copia bordas sem filtrar
+    for (int j = 0; j < width; j++) {
+        dst[0 * width + j]            = src[0 * width + j];           // linha topo
+        dst[(height-1) * width + j]   = src[(height-1) * width + j];  // linha base
+    }
+
+     for (int i = 0; i < height; i++) {
+        dst[i * width + 0]            = src[i * width + 0];           // coluna esquerda
+        dst[i * width + (width-1)]    = src[i * width + (width-1)];   // coluna direita
+    }
+
+    // Aplica o filtro gaussiano para os pixels internos
+    #pragma omp parallel for
     for (int i = 1; i < height - 1; i++) {
         for (int j = 1; j < width - 1; j++) {
             float sum = 0.0f;
