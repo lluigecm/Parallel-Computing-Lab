@@ -61,11 +61,28 @@ int main(int argc, char* argv[]) {
     double speedup = tempo_serial / tempo_omp;
     double efficiency = speedup / omp_get_max_threads();
 
+    double start_tiling = omp_get_wtime();
+    for(int i = 0; i < iterations; i++) {
+        gaussian_blur_tiling(src, dst, height, width);
+
+        // Troca os ponteiros para a próxima iteração
+        float* temp = src;
+        src = dst;
+        dst = temp;
+    }
+    double end_tiling = omp_get_wtime();
+    double tempo_tiling = end_tiling - start_tiling;
+    double speedup_tiling = tempo_serial / tempo_tiling;
+    double efficiency_tiling = speedup_tiling / omp_get_max_threads();
+
     printf("Tempo serial:  %.6f s\n", tempo_serial);
     printf("Tempo OpenMP:  %.6f s\n", tempo_omp);
+    printf("Tempo Tiling:  %.6f s\n", tempo_tiling);
     printf("Threads:       %d\n",     omp_get_max_threads());
     printf("Speedup:       %.2fx\n",  speedup);
+    printf("Speedup Tiling: %.2fx\n",  speedup_tiling);
     printf("Eficiência:    %.2f%%\n", efficiency * 100);
+    printf("Eficiência Tiling: %.2f%%\n", efficiency_tiling * 100);
 
     free(src);
     free(dst);

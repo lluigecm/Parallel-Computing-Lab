@@ -88,3 +88,39 @@ void gaussian_blur_openmp(float* src, float* dst, int height, int width) {
         }
     }
 }
+
+void gaussian_blur_tiling(float* src, float* dst, int height, int width) {
+    // Tamanho do bloco — ajustável
+    int TILE = 128;
+
+    #pragma omp parallel for collapse(2) schedule(dynamic)
+    for (int ti = 1; ti < height - 1; ti += TILE) {
+        for (int tj = 1; tj < width - 1; tj += TILE) {
+
+            // Limites do bloco atual
+            int i_end = ti + TILE < height - 1 ? ti + TILE : height - 1;
+            int j_end = tj + TILE < width - 1  ? tj + TILE : width - 1;
+
+            // Processa os pixels dentro do bloco
+            for (int i = ti; i < i_end; i++) {
+                for (int j = tj; j < j_end; j++) {
+                    float sum = 0.0f;
+                    for (int k = -1; k <= 1; k++)
+                        for (int l = -1; l <= 1; l++)
+                            sum += src[(i+k) * width + (j+l)] * KERNEL[k+1][l+1];
+                    dst[i * width + j] = sum / KERNEL_SUM;
+                }
+            }
+        }
+    }
+
+    // Copia bordas
+    for (int j = 0; j < width; j++) {
+        dst[0 * width + j]           = src[0 * width + j];
+        dst[(height-1) * width + j]  = src[(height-1) * width + j];
+    }
+    for (int i = 0; i < height; i++) {
+        dst[i * width + 0]           = src[i * width + 0];
+        dst[i * width + (width-1)]   = src[i * width + (width-1)];
+    }
+}

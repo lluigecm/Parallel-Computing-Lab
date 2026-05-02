@@ -15,5 +15,7 @@ void gaussian_blur_serial(float* src, float* dst, int height, int width);
 
 void gaussian_blur_openmp(float* src, float* dst, int height, int width);
 
+void gaussian_blur_tiling(float* src, float* dst, int height, int width);
+
 
 #endif // GAUSSIAN_H
