@@ -97,3 +97,19 @@ OMP_NUM_THREADS=8 ./tiling image_4096x4096.png 100 1.0 5
 A saída é salva automaticamente em `output_serial.png`, `output_openmp_Nthreads.png` ou `output_tiling_Nthreads.png`.
 
 ---
+
+## Relatório e gráficos
+
+O relatório detalha a implementação, análise de desempenho e conclusões.
+O script `gerar_graficos.py` gera os gráficos de tempo, speedup e eficiência a partir dos arquivos de saída dos benchmarks.
+Por escolha, o codigo LaTeX do relatório não está incluído no repositório, pois necessitaria de dependências adicionais para compilar (como `pdflatex` e pacotes LaTeX). O relatório finalizado está disponível em PDF.
+
+---
+
+## Testes.txt
+
+O arquivo `testes.txt` contém o comando exato usado para cada teste, incluindo os parâmetros e o número de threads. Ele serve como referência para os dados de desempenho apresentados no relatório.
+
+## Resultados.txt
+
+O arquivo `resultados.txt` contém os tempos de execução médios para cada teste, organizados por implementação (serial, OpenMP, tiling) e número de threads. Ele é a base para os gráficos de desempenho e análise apresentados no relatório.
