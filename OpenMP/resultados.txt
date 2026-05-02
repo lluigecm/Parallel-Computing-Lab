@@ -1,0 +1,608 @@
+==============================================
+Modo:         serial
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 0.082421 s
+  Repetição 2: 0.080760 s
+  Repetição 3: 0.081415 s
+  Repetição 4: 0.080965 s
+  Repetição 5: 0.081450 s
+
+Tempo médio: 0.081402 s
+Resultado salvo em: output_serial.png
+==============================================
+Modo:         serial
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 0.336070 s
+  Repetição 2: 0.328691 s
+  Repetição 3: 0.323831 s
+  Repetição 4: 0.332084 s
+  Repetição 5: 0.329815 s
+
+Tempo médio: 0.330098 s
+Resultado salvo em: output_serial.png
+==============================================
+Modo:         serial
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 1.339935 s
+  Repetição 2: 1.323856 s
+  Repetição 3: 1.315760 s
+  Repetição 4: 1.343683 s
+  Repetição 5: 1.329490 s
+
+Tempo médio: 1.330545 s
+Resultado salvo em: output_serial.png
+==============================================
+Modo:         serial
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 5.643893 s
+  Repetição 2: 5.557168 s
+  Repetição 3: 5.572872 s
+  Repetição 4: 5.526562 s
+  Repetição 5: 5.507601 s
+
+Tempo médio: 5.561620 s
+Resultado salvo em: output_serial.png
+==============================================
+Modo:         openmp
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 0.060488 s
+  Repetição 2: 0.058568 s
+  Repetição 3: 0.058842 s
+  Repetição 4: 0.058588 s
+  Repetição 5: 0.058399 s
+
+Tempo médio: 0.058977 s
+Resultado salvo em: output_openmp_2threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.032949 s
+  Repetição 2: 0.030593 s
+  Repetição 3: 0.030325 s
+  Repetição 4: 0.031136 s
+  Repetição 5: 0.030396 s
+
+Tempo médio: 0.031080 s
+Resultado salvo em: output_openmp_4threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.041967 s
+  Repetição 2: 0.041402 s
+  Repetição 3: 0.040156 s
+  Repetição 4: 0.037174 s
+  Repetição 5: 0.037281 s
+
+Tempo médio: 0.039596 s
+Resultado salvo em: output_openmp_8threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 0.041399 s
+  Repetição 2: 0.027350 s
+  Repetição 3: 0.027062 s
+  Repetição 4: 0.024849 s
+  Repetição 5: 0.031129 s
+
+Tempo médio: 0.030358 s
+Resultado salvo em: output_openmp_16threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 0.293825 s
+  Repetição 2: 0.282575 s
+  Repetição 3: 0.243311 s
+  Repetição 4: 0.234627 s
+  Repetição 5: 0.243245 s
+
+Tempo médio: 0.259517 s
+Resultado salvo em: output_openmp_2threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.125656 s
+  Repetição 2: 0.123859 s
+  Repetição 3: 0.144459 s
+  Repetição 4: 0.180158 s
+  Repetição 5: 0.121995 s
+
+Tempo médio: 0.139225 s
+Resultado salvo em: output_openmp_4threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.156058 s
+  Repetição 2: 0.143542 s
+  Repetição 3: 0.145863 s
+  Repetição 4: 0.145264 s
+  Repetição 5: 0.146329 s
+
+Tempo médio: 0.147411 s
+Resultado salvo em: output_openmp_8threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 0.153262 s
+  Repetição 2: 0.099054 s
+  Repetição 3: 0.093625 s
+  Repetição 4: 0.083742 s
+  Repetição 5: 0.082836 s
+
+Tempo médio: 0.102504 s
+Resultado salvo em: output_openmp_16threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 1.026426 s
+  Repetição 2: 0.944341 s
+  Repetição 3: 0.956157 s
+  Repetição 4: 0.944680 s
+  Repetição 5: 0.952498 s
+
+Tempo médio: 0.964820 s
+Resultado salvo em: output_openmp_2threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.492852 s
+  Repetição 2: 0.488913 s
+  Repetição 3: 0.485788 s
+  Repetição 4: 0.490918 s
+  Repetição 5: 0.486119 s
+
+Tempo médio: 0.488918 s
+Resultado salvo em: output_openmp_4threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.601369 s
+  Repetição 2: 0.593021 s
+  Repetição 3: 0.585585 s
+  Repetição 4: 0.583208 s
+  Repetição 5: 0.590142 s
+
+Tempo médio: 0.590665 s
+Resultado salvo em: output_openmp_8threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 0.498708 s
+  Repetição 2: 0.388853 s
+  Repetição 3: 0.472087 s
+  Repetição 4: 0.475237 s
+  Repetição 5: 0.505271 s
+
+Tempo médio: 0.468031 s
+Resultado salvo em: output_openmp_16threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 4.383090 s
+  Repetição 2: 4.307967 s
+  Repetição 3: 4.297174 s
+  Repetição 4: 4.325331 s
+  Repetição 5: 4.344639 s
+
+Tempo médio: 4.331640 s
+Resultado salvo em: output_openmp_2threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 2.587230 s
+  Repetição 2: 2.247517 s
+  Repetição 3: 2.236723 s
+  Repetição 4: 2.231156 s
+  Repetição 5: 2.380823 s
+
+Tempo médio: 2.336690 s
+Resultado salvo em: output_openmp_4threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 2.413030 s
+  Repetição 2: 2.377236 s
+  Repetição 3: 2.346019 s
+  Repetição 4: 2.356081 s
+  Repetição 5: 2.408815 s
+
+Tempo médio: 2.380236 s
+Resultado salvo em: output_openmp_8threads.png
+==============================================
+Modo:         openmp
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 1.784523 s
+  Repetição 2: 1.613995 s
+  Repetição 3: 1.548988 s
+  Repetição 4: 1.545397 s
+  Repetição 5: 1.555794 s
+
+Tempo médio: 1.609739 s
+Resultado salvo em: output_openmp_16threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 0.068413 s
+  Repetição 2: 0.065058 s
+  Repetição 3: 0.063262 s
+  Repetição 4: 0.062731 s
+  Repetição 5: 0.063061 s
+
+Tempo médio: 0.064505 s
+Resultado salvo em: output_tiling_2threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.035545 s
+  Repetição 2: 0.032886 s
+  Repetição 3: 0.033009 s
+  Repetição 4: 0.033500 s
+  Repetição 5: 0.032836 s
+
+Tempo médio: 0.033555 s
+Resultado salvo em: output_tiling_4threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.031068 s
+  Repetição 2: 0.033487 s
+  Repetição 3: 0.030827 s
+  Repetição 4: 0.030078 s
+  Repetição 5: 0.027870 s
+
+Tempo médio: 0.030666 s
+Resultado salvo em: output_tiling_8threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_512x512.png (512x512)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 0.074425 s
+  Repetição 2: 0.024714 s
+  Repetição 3: 0.024886 s
+  Repetição 4: 0.025717 s
+  Repetição 5: 0.021636 s
+
+Tempo médio: 0.034276 s
+Resultado salvo em: output_tiling_16threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 0.340325 s
+  Repetição 2: 0.302284 s
+  Repetição 3: 0.268334 s
+  Repetição 4: 0.255551 s
+  Repetição 5: 0.256077 s
+
+Tempo médio: 0.284514 s
+Resultado salvo em: output_tiling_2threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.136489 s
+  Repetição 2: 0.134278 s
+  Repetição 3: 0.132900 s
+  Repetição 4: 0.131473 s
+  Repetição 5: 0.134263 s
+
+Tempo médio: 0.133881 s
+Resultado salvo em: output_tiling_4threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.108564 s
+  Repetição 2: 0.100973 s
+  Repetição 3: 0.100063 s
+  Repetição 4: 0.100898 s
+  Repetição 5: 0.089360 s
+
+Tempo médio: 0.099971 s
+Resultado salvo em: output_tiling_8threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_1024x1024.png (1024x1024)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 0.127056 s
+  Repetição 2: 0.082641 s
+  Repetição 3: 0.084301 s
+  Repetição 4: 0.089268 s
+  Repetição 5: 0.095234 s
+
+Tempo médio: 0.095700 s
+Resultado salvo em: output_tiling_16threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 1.086892 s
+  Repetição 2: 1.031082 s
+  Repetição 3: 1.055396 s
+  Repetição 4: 1.030123 s
+  Repetição 5: 1.028011 s
+
+Tempo médio: 1.046301 s
+Resultado salvo em: output_tiling_2threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.558727 s
+  Repetição 2: 0.553195 s
+  Repetição 3: 0.553383 s
+  Repetição 4: 0.551613 s
+  Repetição 5: 0.561095 s
+
+Tempo médio: 0.555603 s
+Resultado salvo em: output_tiling_4threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.451369 s
+  Repetição 2: 0.417250 s
+  Repetição 3: 0.440504 s
+  Repetição 4: 0.413059 s
+  Repetição 5: 0.421394 s
+
+Tempo médio: 0.428715 s
+Resultado salvo em: output_tiling_8threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_2048x2048.png (2048x2048)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 0.383572 s
+  Repetição 2: 0.357410 s
+  Repetição 3: 0.367463 s
+  Repetição 4: 0.374217 s
+  Repetição 5: 0.405002 s
+
+Tempo médio: 0.377533 s
+Resultado salvo em: output_tiling_16threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 4.553681 s
+  Repetição 2: 4.498457 s
+  Repetição 3: 4.519668 s
+  Repetição 4: 4.530521 s
+  Repetição 5: 4.516951 s
+
+Tempo médio: 4.523856 s
+Resultado salvo em: output_tiling_2threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 2.696497 s
+  Repetição 2: 2.482481 s
+  Repetição 3: 2.528537 s
+  Repetição 4: 2.556186 s
+  Repetição 5: 2.534559 s
+
+Tempo médio: 2.559652 s
+Resultado salvo em: output_tiling_4threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 1.804485 s
+  Repetição 2: 1.789826 s
+  Repetição 3: 1.736587 s
+  Repetição 4: 1.727718 s
+  Repetição 5: 1.812879 s
+
+Tempo médio: 1.774299 s
+Resultado salvo em: output_tiling_8threads.png
+==============================================
+Modo:         tiling
+Arquivo:      image_4096x4096.png (4096x4096)
+Iterações:    100
+Repetições:   5
+Sigma:        1.00
+Threads:      16
+==============================================
+
+  Repetição 1: 1.588895 s
+  Repetição 2: 1.439090 s
+  Repetição 3: 1.454450 s
+  Repetição 4: 1.435785 s
+  Repetição 5: 1.445171 s
+
+Tempo médio: 1.472678 s
+Resultado salvo em: output_tiling_16threads.png

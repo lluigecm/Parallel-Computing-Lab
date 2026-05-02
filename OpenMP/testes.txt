@@ -1,0 +1,73 @@
+# =============================================================
+# TESTES SERIAL
+# =============================================================
+
+# --- 512x512 ---
+./serial image_512x512.png 100 1.0 5
+
+# --- 1024x1024 ---
+./serial image_1024x1024.png 100 1.0 5
+
+# --- 2048x2048 ---
+./serial image_2048x2048.png 100 1.0 5
+
+# --- 4096x4096 ---
+./serial image_4096x4096.png 100 1.0 5
+
+
+# ============================================================
+# TESTES OPENMP
+# ============================================================
+
+# --- 512x512 ---
+OMP_NUM_THREADS=2  ./openmp image_512x512.png 100 1.0 5
+OMP_NUM_THREADS=4  ./openmp image_512x512.png 100 1.0 5
+OMP_NUM_THREADS=8  ./openmp image_512x512.png 100 1.0 5
+OMP_NUM_THREADS=16 ./openmp image_512x512.png 100 1.0 5
+
+# --- 1024x1024 ---
+OMP_NUM_THREADS=2  ./openmp image_1024x1024.png 100 1.0 5
+OMP_NUM_THREADS=4  ./openmp image_1024x1024.png 100 1.0 5
+OMP_NUM_THREADS=8  ./openmp image_1024x1024.png 100 1.0 5
+OMP_NUM_THREADS=16 ./openmp image_1024x1024.png 100 1.0 5
+
+# --- 2048x2048 ---
+OMP_NUM_THREADS=2  ./openmp image_2048x2048.png 100 1.0 5
+OMP_NUM_THREADS=4  ./openmp image_2048x2048.png 100 1.0 5
+OMP_NUM_THREADS=8  ./openmp image_2048x2048.png 100 1.0 5
+OMP_NUM_THREADS=16 ./openmp image_2048x2048.png 100 1.0 5
+
+# --- 4096x4096 ---
+OMP_NUM_THREADS=2  ./openmp image_4096x4096.png 100 1.0 5
+OMP_NUM_THREADS=4  ./openmp image_4096x4096.png 100 1.0 5
+OMP_NUM_THREADS=8  ./openmp image_4096x4096.png 100 1.0 5
+OMP_NUM_THREADS=16 ./openmp image_4096x4096.png 100 1.0 5
+
+
+# ============================================================
+# TESTES TILING
+# ============================================================
+
+# --- 512x512 ---
+OMP_NUM_THREADS=2  ./tiling image_512x512.png 100 1.0 5
+OMP_NUM_THREADS=4  ./tiling image_512x512.png 100 1.0 5
+OMP_NUM_THREADS=8  ./tiling image_512x512.png 100 1.0 5
+OMP_NUM_THREADS=16 ./tiling image_512x512.png 100 1.0 5
+
+# --- 1024x1024 ---
+OMP_NUM_THREADS=2  ./tiling image_1024x1024.png 100 1.0 5
+OMP_NUM_THREADS=4  ./tiling image_1024x1024.png 100 1.0 5
+OMP_NUM_THREADS=8  ./tiling image_1024x1024.png 100 1.0 5
+OMP_NUM_THREADS=16 ./tiling image_1024x1024.png 100 1.0 5
+
+# --- 2048x2048 ---
+OMP_NUM_THREADS=2  ./tiling image_2048x2048.png 100 1.0 5
+OMP_NUM_THREADS=4  ./tiling image_2048x2048.png 100 1.0 5
+OMP_NUM_THREADS=8  ./tiling image_2048x2048.png 100 1.0 5
+OMP_NUM_THREADS=16 ./tiling image_2048x2048.png 100 1.0 5
+
+# --- 4096x4096 ---
+OMP_NUM_THREADS=2  ./tiling image_4096x4096.png 100 1.0 5
+OMP_NUM_THREADS=4  ./tiling image_4096x4096.png 100 1.0 5
+OMP_NUM_THREADS=8  ./tiling image_4096x4096.png 100 1.0 5
+OMP_NUM_THREADS=16 ./tiling image_4096x4096.png 100 1.0 5

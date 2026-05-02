@@ -1,3 +1,9 @@
+*.tex
+*.log
+*.toc
+*.aux
+OpenMP/Relatorio/Makefile
+
 # Prerequisites
 *.d
 
