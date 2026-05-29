@@ -1,0 +1,90 @@
+Analise de Desempenho — Serial vs OpenMP vs MPI
+Todos os testes: 1000 iteracoes, 5 repeticoes, kernel 3x3, sigma 1.0.
+
+=============================================================
+TEMPOS MEDIOS (segundos)
+=============================================================
+
+Serial
+  512x512:    0.853 s
+  1024x1024:  3.457 s
+  2048x2048: 13.741 s
+  4096x4096: 61.484 s
+
+512x512
+  T/P    Serial   OpenMP   MPI      Speedup OMP   Speedup MPI
+  2      0.853    0.622    0.449    1.37x         1.90x
+  4      0.853    0.376    0.236    2.27x         3.62x
+  8      0.853    0.390    0.293    2.19x         2.91x
+  16     0.853    0.293    0.214    2.91x         3.99x
+
+1024x1024
+  T/P    Serial   OpenMP   MPI      Speedup OMP   Speedup MPI
+  2      3.457    2.653    1.829    1.30x         1.89x
+  4      3.457    1.390    1.134    2.49x         3.05x
+  8      3.457    1.526    1.123    2.27x         3.08x
+  16     3.457    1.037    0.768    3.33x         4.50x
+
+2048x2048
+  T/P    Serial   OpenMP   MPI      Speedup OMP   Speedup MPI
+  2      13.741   10.056   7.297    1.37x         1.88x
+  4      13.741    5.379   3.884    2.55x         3.54x
+  8      13.741    6.043   4.396    2.27x         3.13x
+  16     13.741    4.107   3.079    3.35x         4.46x
+
+4096x4096
+  T/P    Serial   OpenMP   MPI      Speedup OMP   Speedup MPI
+  2      61.484   41.044  29.089    1.50x         2.11x
+  4      61.484   24.023  16.256    2.56x         3.78x
+  8      61.484   24.792  17.344    2.48x         3.55x
+  16     61.484   15.799  11.181    3.89x         5.50x
+
+=============================================================
+GANHO MPI EM RELACAO AO OPENMP (mesmo numero de T/P)
+=============================================================
+
+  T/P    512      1024     2048     4096
+  2      +28%     +31%     +27%     +29%
+  4      +37%     +18%     +28%     +32%
+  8      +25%     +26%     +27%     +30%
+  16     +27%     +26%     +25%     +29%
+
+=============================================================
+ESCALABILIDADE (speedup de 2 e 16 T/P, em relacao ao serial)
+=============================================================
+
+  Imagem      OpenMP 2T   OpenMP 16T   Escala OMP   MPI 2P   MPI 16P   Escala MPI
+  512x512     1.37x       2.91x        2.12x        1.90x    3.99x     2.10x
+  1024x1024   1.30x       3.33x        2.56x        1.89x    4.50x     2.38x
+  2048x2048   1.37x       3.35x        2.45x        1.88x    4.46x     2.37x
+  4096x4096   1.50x       3.89x        2.59x        2.11x    5.50x     2.61x
+
+=============================================================
+OBSERVACOES
+=============================================================
+
+MPI consistentemente mais rapido que OpenMP (~25-37%)
+Contra-intuitivo, mas faz sentido: cada processo MPI
+opera sobre um bloco contiguo proprio da imagem, com melhor localidade de cache
+e sem falso compartilhamento. O OpenMP compartilha a imagem inteira entre threads,
+gerando maior pressao no barramento de memoria.
+
+(Problema?) em 8 T/P (Ja discutido no Relatorio de OpenMP)
+Para imagens grandes, 8 T/P e mais lento que 4 em ambas as abordagens:
+OpenMP 4096: 4T = 24.0s  ->  8T = 24.8s
+MPI 4096:    4P = 16.3s  ->  8P = 17.3s
+O algoritmo e memory-bound. Com 4 cores o barramento ja esta saturado; mais cores
+aumentam a contencao sem ganhar throughput. Com 16 (SMT) o processador esconde
+latencia alternando threads no mesmo core, o que explica a melhora.
+
+Escalabilidade limitada
+O speedup ideal de 2->16 seria 8x. Na pratica ambos ficam abaixo de 6x mesmo
+no melhor caso (MPI 4096: 5.50x vs serial).Um kernel maior aumentaria a proporcao
+de calculo por acesso e melhoraria a escalabilidade.
+
+MPI aparentemente escala melhor que OpenMP em imagens grandes
+A diferenca de speedup entre as abordagens cresce juntamente com o tamanho da imagem.
+No 4096x4096 com 16 T/P: MPI alcanca 5.50x, OpenMP alcanca 3.89x.
+Isso reforça a vantagem de isolamento de memoria do MPI nesse cenário.
+
+T/P = Threads (OpenMP) ou Processos (MPI)

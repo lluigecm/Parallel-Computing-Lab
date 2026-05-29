@@ -1,0 +1,66 @@
+# =============================================================
+# TESTES SERIAL
+# =============================================================
+
+../OpenMP/serial ../image_512x512.png 1000 1.0 5
+../OpenMP/serial ../image_1024x1024.png 1000 1.0 5
+../OpenMP/serial ../image_2048x2048.png 1000 1.0 5
+../OpenMP/serial ../image_4096x4096.png 1000 1.0 5
+
+
+# =============================================================
+# TESTES OPENMP
+# =============================================================
+
+# --- 512x512 ---
+OMP_NUM_THREADS=2  ../OpenMP/openmp ../image_512x512.png 1000 1.0 5
+OMP_NUM_THREADS=4  ../OpenMP/openmp ../image_512x512.png 1000 1.0 5
+OMP_NUM_THREADS=8  ../OpenMP/openmp ../image_512x512.png 1000 1.0 5
+OMP_NUM_THREADS=16 ../OpenMP/openmp ../image_512x512.png 1000 1.0 5
+
+# --- 1024x1024 ---
+OMP_NUM_THREADS=2  ../OpenMP/openmp ../image_1024x1024.png 1000 1.0 5
+OMP_NUM_THREADS=4  ../OpenMP/openmp ../image_1024x1024.png 1000 1.0 5
+OMP_NUM_THREADS=8  ../OpenMP/openmp ../image_1024x1024.png 1000 1.0 5
+OMP_NUM_THREADS=16 ../OpenMP/openmp ../image_1024x1024.png 1000 1.0 5
+
+# --- 2048x2048 ---
+OMP_NUM_THREADS=2  ../OpenMP/openmp ../image_2048x2048.png 1000 1.0 5
+OMP_NUM_THREADS=4  ../OpenMP/openmp ../image_2048x2048.png 1000 1.0 5
+OMP_NUM_THREADS=8  ../OpenMP/openmp ../image_2048x2048.png 1000 1.0 5
+OMP_NUM_THREADS=16 ../OpenMP/openmp ../image_2048x2048.png 1000 1.0 5
+
+# --- 4096x4096 ---
+OMP_NUM_THREADS=2  ../OpenMP/openmp ../image_4096x4096.png 1000 1.0 5
+OMP_NUM_THREADS=4  ../OpenMP/openmp ../image_4096x4096.png 1000 1.0 5
+OMP_NUM_THREADS=8  ../OpenMP/openmp ../image_4096x4096.png 1000 1.0 5
+OMP_NUM_THREADS=16 ../OpenMP/openmp ../image_4096x4096.png 1000 1.0 5
+
+
+# =============================================================
+# TESTES MPI
+# =============================================================
+
+# --- 512x512 ---
+mpirun -np 2  ./mpi ../image_512x512.png 1000 3 1.0 5
+mpirun -np 4  ./mpi ../image_512x512.png 1000 3 1.0 5
+mpirun -np 8  ./mpi ../image_512x512.png 1000 3 1.0 5
+mpirun --use-hwthread-cpus -np 16 ./mpi ../image_512x512.png 1000 3 1.0 5
+
+# --- 1024x1024 ---
+mpirun -np 2  ./mpi ../image_1024x1024.png 1000 3 1.0 5
+mpirun -np 4  ./mpi ../image_1024x1024.png 1000 3 1.0 5
+mpirun -np 8  ./mpi ../image_1024x1024.png 1000 3 1.0 5
+mpirun --use-hwthread-cpus -np 16 ./mpi ../image_1024x1024.png 1000 3 1.0 5
+
+# --- 2048x2048 ---
+mpirun -np 2  ./mpi ../image_2048x2048.png 1000 3 1.0 5
+mpirun -np 4  ./mpi ../image_2048x2048.png 1000 3 1.0 5
+mpirun -np 8  ./mpi ../image_2048x2048.png 1000 3 1.0 5
+mpirun --use-hwthread-cpus -np 16 ./mpi ../image_2048x2048.png 1000 3 1.0 5
+
+# --- 4096x4096 ---
+mpirun -np 2  ./mpi ../image_4096x4096.png 1000 3 1.0 5
+mpirun -np 4  ./mpi ../image_4096x4096.png 1000 3 1.0 5
+mpirun -np 8  ./mpi ../image_4096x4096.png 1000 3 1.0 5
+mpirun --use-hwthread-cpus -np 16 ./mpi ../image_4096x4096.png 1000 3 1.0 5
