@@ -152,5 +152,7 @@ Cada diretório contém um arquivo `resultados.txt` com os tempos de execução 
 
 Declaro que este projeto contou com o auxílio da ferramenta de IA **Claude (Anthropic)** exclusivamente para as tarefas de depuração e estruturação da implementação MPI, discussão dos resultados de desempenho, organização dos arquivos de análise e estruturação do relatório em LaTeX. Como autor, atesto que revisei, testei e validei criticamente todo o conteúdo gerado, assumindo total e exclusiva responsabilidade pela correção lógica do código, precisão dos relatórios de desempenho e integridade acadêmica do material entregue.
 
+
 Lucas Luige Costa Miranda — 31 de maio de 2026
+
 Henrique Cerqueira Fadigas — 31 de maio de 2026
