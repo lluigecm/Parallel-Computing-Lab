@@ -31,7 +31,11 @@ Parallel-Computing-Lab/
     ├── Makefile            # compila o binário mpi
     ├── analise.txt         # análise comparativa Serial vs OpenMP vs MPI
     ├── resultados.txt      # tempos de execução (serial, OpenMP e MPI)
-    └── testes.txt          # comandos exatos utilizados nos testes
+    ├── testes.txt          # comandos exatos utilizados nos testes
+    └── Relatorio/
+        ├── relatorio.pdf       # relatório (feito em LaTeX)
+        ├── gerar_graficos.py   # gera os gráficos (requer matplotlib)
+        └── figuras/            # gráficos gerados (PDF)
 ```
 
 ---
@@ -128,9 +132,9 @@ A saída é salva automaticamente em `output_serial.png`, `output_openmp_Nthread
 
 ## Relatório e gráficos
 
-O relatório detalha a implementação OpenMP, análise de desempenho e conclusões.  
-O script `gerar_graficos.py` gera os gráficos de tempo, speedup e eficiência a partir dos arquivos de saída dos benchmarks.  
-Por escolha, o código LaTeX do relatório não está incluído no repositório, pois necessitaria de dependências adicionais para compilar (como `pdflatex` e pacotes LaTeX). O relatório finalizado está disponível em PDF.
+Cada etapa possui seu próprio relatório em PDF em `OpenMP/Relatorio/` e `MPI/Relatorio/`.
+O script `gerar_graficos.py` presente em cada diretório gera os gráficos de tempo, speedup e eficiência (requer `matplotlib`).
+Por escolha, o código-fonte LaTeX não está incluído no repositório. Os relatórios finalizados estão disponíveis em PDF.
 
 ---
 
@@ -141,3 +145,12 @@ Cada diretório (`OpenMP/` e `MPI/`) contém um arquivo `testes.txt` com o coman
 ## Resultados
 
 Cada diretório contém um arquivo `resultados.txt` com os tempos de execução brutos de cada repetição e o tempo médio calculado. O arquivo em `MPI/resultados.txt` consolida os resultados das três implementações (serial, OpenMP e MPI) e é a base para a análise comparativa em `MPI/analise.txt`.
+
+---
+
+## Nota de Transparência sobre o Uso de IA
+
+Declaro que este projeto contou com o auxílio da ferramenta de IA **Claude (Anthropic)** exclusivamente para as tarefas de depuração e estruturação da implementação MPI, discussão dos resultados de desempenho, organização dos arquivos de análise e estruturação do relatório em LaTeX. Como autor, atesto que revisei, testei e validei criticamente todo o conteúdo gerado, assumindo total e exclusiva responsabilidade pela correção lógica do código, precisão dos relatórios de desempenho e integridade acadêmica do material entregue.
+
+Lucas Luige Costa Miranda — 31 de maio de 2026
+Henrique Cerqueira Fadigas — 31 de maio de 2026

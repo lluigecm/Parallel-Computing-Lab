@@ -21,11 +21,11 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    const char* filename    = argv[1];
-    int         iterations  = atoi(argv[2]);
-    int         kernel_size = atoi(argv[3]);
-    float       sigma       = (float)atof(argv[4]);
-    int         repeticoes  = atoi(argv[5]);
+    const char* filename = argv[1];
+    int iterations = atoi(argv[2]);
+    int kernel_size = atoi(argv[3]);
+    float sigma = (float)atof(argv[4]);
+    int repeticoes = atoi(argv[5]);
 
     if (kernel_size < 3 || kernel_size % 2 == 0) {
         if (rank == 0) fprintf(stderr, "Erro: kernel_size deve ser impar e >= 3\n");
@@ -53,15 +53,15 @@ int main(int argc, char* argv[]) {
     int extra = height % size;
 
     int* local_rows = (int*)malloc(size * sizeof(int));
-    int* counts     = (int*)malloc(size * sizeof(int));
-    int* displs     = (int*)malloc(size * sizeof(int));
+    int* counts = (int*)malloc(size * sizeof(int));
+    int* displs = (int*)malloc(size * sizeof(int));
 
     int offset = 0;
     for (int r = 0; r < size; r++) {
         local_rows[r] = base + (r < extra ? 1 : 0);
-        counts[r]     = local_rows[r] * width;
-        displs[r]     = offset;
-        offset       += counts[r];
+        counts[r] = local_rows[r] * width;
+        displs[r] = offset;
+        offset += counts[r];
     }
 
     int my_rows = local_rows[rank];
@@ -83,10 +83,10 @@ int main(int argc, char* argv[]) {
     if (rank == 0) { free(full_img); full_img = NULL; }
 
     // MPI_PROC_NULL nos extremos faz o MPI ignorar essas comunicações
-    int top    = (rank == 0)        ? MPI_PROC_NULL : rank - 1;
+    int top = (rank == 0) ? MPI_PROC_NULL : rank - 1;
     int bottom = (rank == size - 1) ? MPI_PROC_NULL : rank + 1;
-    int first  = (rank == 0);
-    int last   = (rank == size - 1);
+    int first = (rank == 0);
+    int last = (rank == size - 1);
 
     // ─── Cabecalho ────────────────────────────────────────────────────────────
     if (rank == 0) {
