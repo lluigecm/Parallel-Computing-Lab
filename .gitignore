@@ -1,8 +1,18 @@
+.claude
+*.fls
+*.fdb_latexmk
 *.tex
 *.log
 *.toc
 *.aux
 OpenMP/Relatorio/Makefile
+
+# Binarios compilados (gerados por make)
+MPI/mpi
+OpenMP/serial
+OpenMP/openmp
+OpenMP/tiling
+CUDA/cuda
 
 # Prerequisites
 *.d

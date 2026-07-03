@@ -1,0 +1,20 @@
+# =============================================================
+# BATERIA DE TESTES CUDA
+# Defaults: 1000 iteracoes, kernel 3x3, sigma 1.0, 5 repeticoes
+# Assinatura: ./cuda <imagem.png> [iteracoes] [kernel_size] [sigma] [repeticoes] [modo]
+# =============================================================
+
+# --- Versao GLOBAL (memoria global) ---
+./cuda ../image_512x512.png   1000 3 1.0 5 global
+./cuda ../image_1024x1024.png 1000 3 1.0 5 global
+./cuda ../image_2048x2048.png 1000 3 1.0 5 global
+./cuda ../image_4096x4096.png 1000 3 1.0 5 global
+
+# --- Versao SHARED (tiling em shared memory + kernel em constant) ---
+./cuda ../image_512x512.png   1000 3 1.0 5 shared
+./cuda ../image_1024x1024.png 1000 3 1.0 5 shared
+./cuda ../image_2048x2048.png 1000 3 1.0 5 shared
+./cuda ../image_4096x4096.png 1000 3 1.0 5 shared
+
+# Como os defaults ja sao 1000/3/1.0/5, a versao shared pode ser chamada curta:
+# ./cuda ../image_4096x4096.png
