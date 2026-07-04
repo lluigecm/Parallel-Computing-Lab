@@ -1,8 +1,27 @@
+.claude
+HANDOFF.md
+*.fls
+*.fdb_latexmk
 *.tex
 *.log
 *.toc
 *.aux
 OpenMP/Relatorio/Makefile
+resultados_i5-11300h.txt
+
+# Binarios compilados (gerados por make)
+MPI/mpi
+OpenMP/serial
+OpenMP/openmp
+OpenMP/tiling
+CUDA/cuda
+
+# Imagens de teste geradas (gerarImagens.py) e saidas de benchmark
+image_*.png
+output_*.png
+
+# Instaladores baixados manualmente (ex: CUDA keyring)
+*.deb
 
 # Prerequisites
 *.d

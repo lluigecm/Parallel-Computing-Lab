@@ -1,0 +1,692 @@
+==================== SERIAL ====================
+--- serial 512x512 ---
+==============================================
+Modo:         serial
+Arquivo:      ../image_512x512.png (512x512)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 0.624534 s
+  Repetição 2: 0.631392 s
+  Repetição 3: 0.620288 s
+  Repetição 4: 0.626027 s
+  Repetição 5: 0.634970 s
+
+Tempo médio: 0.627442 s
+Resultado salvo em: output_serial.png
+--- serial 1024x1024 ---
+==============================================
+Modo:         serial
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 2.779131 s
+  Repetição 2: 2.860021 s
+  Repetição 3: 2.821081 s
+  Repetição 4: 2.838335 s
+  Repetição 5: 2.787243 s
+
+Tempo médio: 2.817162 s
+Resultado salvo em: output_serial.png
+--- serial 2048x2048 ---
+==============================================
+Modo:         serial
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 11.373357 s
+  Repetição 2: 11.629939 s
+  Repetição 3: 11.344245 s
+  Repetição 4: 11.502114 s
+  Repetição 5: 11.389234 s
+
+Tempo médio: 11.447778 s
+Resultado salvo em: output_serial.png
+--- serial 4096x4096 ---
+==============================================
+Modo:         serial
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+==============================================
+
+  Repetição 1: 44.739135 s
+  Repetição 2: 44.558798 s
+  Repetição 3: 44.832440 s
+  Repetição 4: 44.999522 s
+  Repetição 5: 44.419635 s
+
+Tempo médio: 44.709906 s
+Resultado salvo em: output_serial.png
+==================== OPENMP ====================
+--- openmp 512x512 threads=2 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_512x512.png (512x512)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 0.485889 s
+  Repetição 2: 0.374761 s
+  Repetição 3: 0.377519 s
+  Repetição 4: 0.417561 s
+  Repetição 5: 0.394617 s
+
+Tempo médio: 0.410069 s
+Resultado salvo em: output_openmp_2threads.png
+--- openmp 512x512 threads=4 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_512x512.png (512x512)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 0.356126 s
+  Repetição 2: 0.334041 s
+  Repetição 3: 0.283103 s
+  Repetição 4: 0.326755 s
+  Repetição 5: 0.274721 s
+
+Tempo médio: 0.314949 s
+Resultado salvo em: output_openmp_4threads.png
+--- openmp 512x512 threads=8 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_512x512.png (512x512)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 0.453009 s
+  Repetição 2: 0.180559 s
+  Repetição 3: 0.262292 s
+  Repetição 4: 0.182627 s
+  Repetição 5: 0.353142 s
+
+Tempo médio: 0.286326 s
+Resultado salvo em: output_openmp_8threads.png
+--- openmp 1024x1024 threads=2 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 1.782721 s
+  Repetição 2: 1.928291 s
+  Repetição 3: 1.653233 s
+  Repetição 4: 1.708382 s
+  Repetição 5: 1.680488 s
+
+Tempo médio: 1.750623 s
+Resultado salvo em: output_openmp_2threads.png
+--- openmp 1024x1024 threads=4 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 1.413656 s
+  Repetição 2: 1.356573 s
+  Repetição 3: 1.252488 s
+  Repetição 4: 1.399150 s
+  Repetição 5: 1.428201 s
+
+Tempo médio: 1.370013 s
+Resultado salvo em: output_openmp_4threads.png
+--- openmp 1024x1024 threads=8 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 1.165842 s
+  Repetição 2: 1.130262 s
+  Repetição 3: 0.962533 s
+  Repetição 4: 1.023636 s
+  Repetição 5: 0.967960 s
+
+Tempo médio: 1.050046 s
+Resultado salvo em: output_openmp_8threads.png
+--- openmp 2048x2048 threads=2 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 6.660799 s
+  Repetição 2: 6.872056 s
+  Repetição 3: 6.771437 s
+  Repetição 4: 6.932719 s
+  Repetição 5: 7.040780 s
+
+Tempo médio: 6.855558 s
+Resultado salvo em: output_openmp_2threads.png
+--- openmp 2048x2048 threads=4 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 5.462788 s
+  Repetição 2: 5.681209 s
+  Repetição 3: 5.505477 s
+  Repetição 4: 5.614250 s
+  Repetição 5: 5.366255 s
+
+Tempo médio: 5.525996 s
+Resultado salvo em: output_openmp_4threads.png
+--- openmp 2048x2048 threads=8 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 3.808324 s
+  Repetição 2: 3.316710 s
+  Repetição 3: 3.431282 s
+  Repetição 4: 3.352814 s
+  Repetição 5: 3.338554 s
+
+Tempo médio: 3.449537 s
+Resultado salvo em: output_openmp_8threads.png
+--- openmp 4096x4096 threads=2 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      2
+==============================================
+
+  Repetição 1: 26.980905 s
+  Repetição 2: 26.462072 s
+  Repetição 3: 26.464785 s
+  Repetição 4: 27.168201 s
+  Repetição 5: 26.595161 s
+
+Tempo médio: 26.734225 s
+Resultado salvo em: output_openmp_2threads.png
+--- openmp 4096x4096 threads=4 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      4
+==============================================
+
+  Repetição 1: 21.576992 s
+  Repetição 2: 21.452763 s
+  Repetição 3: 21.079373 s
+  Repetição 4: 21.264490 s
+  Repetição 5: 21.474570 s
+
+Tempo médio: 21.369637 s
+Resultado salvo em: output_openmp_4threads.png
+--- openmp 4096x4096 threads=8 ---
+==============================================
+Modo:         openmp
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iterações:    1000
+Repetições:   5
+Sigma:        1.00
+Threads:      8
+==============================================
+
+  Repetição 1: 13.158645 s
+  Repetição 2: 12.852758 s
+  Repetição 3: 12.780603 s
+  Repetição 4: 12.950140 s
+  Repetição 5: 13.341091 s
+
+Tempo médio: 13.016647 s
+Resultado salvo em: output_openmp_8threads.png
+
+==================== MPI ====================
+
+--- mpi 512x512 procs=2 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_512x512.png (512x512)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    2
+==============================================
+
+  Repeticao 1: 1.040544 s
+  Repeticao 2: 1.104479 s
+  Repeticao 3: 1.128020 s
+  Repeticao 4: 1.099521 s
+  Repeticao 5: 1.271700 s
+
+Tempo medio: 1.128853 s
+Resultado salvo em: output_mpi_2procs.png
+
+--- mpi 512x512 procs=4 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_512x512.png (512x512)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    4
+==============================================
+
+  Repeticao 1: 0.845047 s
+  Repeticao 2: 0.863995 s
+  Repeticao 3: 0.858087 s
+  Repeticao 4: 0.811130 s
+  Repeticao 5: 0.835804 s
+
+Tempo medio: 0.842813 s
+Resultado salvo em: output_mpi_4procs.png
+
+--- mpi 512x512 procs=8 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_512x512.png (512x512)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    8
+==============================================
+
+  Repeticao 1: 0.586559 s
+  Repeticao 2: 0.554730 s
+  Repeticao 3: 0.567932 s
+  Repeticao 4: 0.506021 s
+  Repeticao 5: 0.544141 s
+
+Tempo medio: 0.551877 s
+Resultado salvo em: output_mpi_8procs.png
+
+--- mpi 1024x1024 procs=2 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    2
+==============================================
+
+  Repeticao 1: 4.656548 s
+  Repeticao 2: 4.284133 s
+  Repeticao 3: 4.268830 s
+  Repeticao 4: 4.206273 s
+  Repeticao 5: 4.454479 s
+
+Tempo medio: 4.374053 s
+Resultado salvo em: output_mpi_2procs.png
+
+--- mpi 1024x1024 procs=4 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    4
+==============================================
+
+  Repeticao 1: 3.418358 s
+  Repeticao 2: 3.279965 s
+  Repeticao 3: 3.436705 s
+  Repeticao 4: 3.505590 s
+  Repeticao 5: 3.417768 s
+
+Tempo medio: 3.411677 s
+Resultado salvo em: output_mpi_4procs.png
+
+--- mpi 1024x1024 procs=8 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    8
+==============================================
+
+  Repeticao 1: 2.095052 s
+  Repeticao 2: 2.011470 s
+  Repeticao 3: 2.346995 s
+  Repeticao 4: 2.285687 s
+  Repeticao 5: 2.240044 s
+
+Tempo medio: 2.195850 s
+Resultado salvo em: output_mpi_8procs.png
+
+--- mpi 2048x2048 procs=2 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    2
+==============================================
+
+  Repeticao 1: 17.677462 s
+  Repeticao 2: 17.262648 s
+  Repeticao 3: 17.556705 s
+  Repeticao 4: 17.580297 s
+  Repeticao 5: 17.379872 s
+
+Tempo medio: 17.491397 s
+Resultado salvo em: output_mpi_2procs.png
+
+--- mpi 2048x2048 procs=4 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    4
+==============================================
+
+  Repeticao 1: 13.623134 s
+  Repeticao 2: 13.667426 s
+  Repeticao 3: 13.771718 s
+  Repeticao 4: 13.836495 s
+  Repeticao 5: 13.592760 s
+
+Tempo medio: 13.698306 s
+Resultado salvo em: output_mpi_4procs.png
+
+--- mpi 2048x2048 procs=8 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    8
+==============================================
+
+  Repeticao 1: 7.959618 s
+  Repeticao 2: 7.866361 s
+  Repeticao 3: 7.876712 s
+  Repeticao 4: 8.137972 s
+  Repeticao 5: 8.555284 s
+
+Tempo medio: 8.079189 s
+Resultado salvo em: output_mpi_8procs.png
+
+--- mpi 4096x4096 procs=2 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    2
+==============================================
+
+  Repeticao 1: 74.797498 s
+  Repeticao 2: 73.664343 s
+  Repeticao 3: 73.546306 s
+  Repeticao 4: 75.399334 s
+  Repeticao 5: 75.679018 s
+
+Tempo medio: 74.617300 s
+Resultado salvo em: output_mpi_2procs.png
+
+--- mpi 4096x4096 procs=4 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    4
+==============================================
+
+  Repeticao 1: 52.261375 s
+  Repeticao 2: 52.256401 s
+  Repeticao 3: 52.323453 s
+  Repeticao 4: 52.141831 s
+  Repeticao 5: 52.418515 s
+
+Tempo medio: 52.280315 s
+Resultado salvo em: output_mpi_4procs.png
+
+--- mpi 4096x4096 procs=8 ---
+==============================================
+Modo:         MPI
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Processos:    8
+==============================================
+
+  Repeticao 1: 35.256141 s
+  Repeticao 2: 33.662149 s
+  Repeticao 3: 31.569142 s
+  Repeticao 4: 31.517875 s
+  Repeticao 5: 31.701511 s
+
+Tempo medio: 32.741364 s
+Resultado salvo em: output_mpi_8procs.png
+==================== FIM MPI ====================
+
+==================== CUDA ====================
+--- cuda 512x512 modo=global ---
+==============================================
+Modo:         CUDA (global)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_512x512.png (512x512)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 0.034481 s
+  Repeticao 2: 0.034512 s
+  Repeticao 3: 0.034490 s
+  Repeticao 4: 0.034499 s
+  Repeticao 5: 0.034578 s
+
+Resultado salvo em: output_cuda_global.png
+Tempo medio: 0.034512 s
+--- cuda 512x512 modo=shared ---
+==============================================
+Modo:         CUDA (shared)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_512x512.png (512x512)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 0.039408 s
+  Repeticao 2: 0.039407 s
+  Repeticao 3: 0.039099 s
+  Repeticao 4: 0.038298 s
+  Repeticao 5: 0.038381 s
+
+Resultado salvo em: output_cuda_shared.png
+Tempo medio: 0.038919 s
+--- cuda 1024x1024 modo=global ---
+==============================================
+Modo:         CUDA (global)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 0.110192 s
+  Repeticao 2: 0.110213 s
+  Repeticao 3: 0.109895 s
+  Repeticao 4: 0.110245 s
+  Repeticao 5: 0.109950 s
+
+Resultado salvo em: output_cuda_global.png
+Tempo medio: 0.110099 s
+--- cuda 1024x1024 modo=shared ---
+==============================================
+Modo:         CUDA (shared)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_1024x1024.png (1024x1024)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 0.143461 s
+  Repeticao 2: 0.143202 s
+  Repeticao 3: 0.143230 s
+  Repeticao 4: 0.143155 s
+  Repeticao 5: 0.143269 s
+
+Resultado salvo em: output_cuda_shared.png
+Tempo medio: 0.143264 s
+--- cuda 2048x2048 modo=global ---
+==============================================
+Modo:         CUDA (global)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 0.438038 s
+  Repeticao 2: 0.437987 s
+  Repeticao 3: 0.439162 s
+  Repeticao 4: 0.438889 s
+  Repeticao 5: 0.437984 s
+
+Resultado salvo em: output_cuda_global.png
+Tempo medio: 0.438412 s
+--- cuda 2048x2048 modo=shared ---
+==============================================
+Modo:         CUDA (shared)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_2048x2048.png (2048x2048)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 0.581068 s
+  Repeticao 2: 0.580706 s
+  Repeticao 3: 0.580747 s
+  Repeticao 4: 0.581050 s
+  Repeticao 5: 0.580762 s
+
+Resultado salvo em: output_cuda_shared.png
+Tempo medio: 0.580867 s
+--- cuda 4096x4096 modo=global ---
+==============================================
+Modo:         CUDA (global)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 1.760493 s
+  Repeticao 2: 1.759313 s
+  Repeticao 3: 1.760469 s
+  Repeticao 4: 1.760893 s
+  Repeticao 5: 1.760422 s
+
+Resultado salvo em: output_cuda_global.png
+Tempo medio: 1.760318 s
+--- cuda 4096x4096 modo=shared ---
+==============================================
+Modo:         CUDA (shared)
+GPU:          NVIDIA GeForce GTX 1650
+Arquivo:      ../image_4096x4096.png (4096x4096)
+Iteracoes:    1000
+Repeticoes:   5
+Sigma:        1.00
+Kernel:       3x3
+Bloco:        16x16
+==============================================
+
+  Repeticao 1: 2.365989 s
+  Repeticao 2: 2.364982 s
+  Repeticao 3: 2.364658 s
+  Repeticao 4: 2.364517 s
+  Repeticao 5: 2.364257 s
+
+Resultado salvo em: output_cuda_shared.png
+Tempo medio: 2.364881 s
+==================== FIM ====================
