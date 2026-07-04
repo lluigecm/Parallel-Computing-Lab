@@ -193,4 +193,49 @@ plt.tight_layout()
 plt.savefig('figuras/escalabilidade.pdf', bbox_inches='tight')
 plt.close()
 
+# ── Grafico 6: Eficiencia de banda de memoria da GPU ──────────────────────────
+# banda alcancada = trafego minimo por iteracao (ler + escrever a imagem) / tempo
+# eficiencia = banda alcancada / pico (GDDR5 da GTX 1650 = 128 GB/s)
+# Estimativa: e um piso (assume que o cache L2 absorve o reuso dos vizinhos).
+
+N_pix     = [512, 1024, 2048, 4096]
+PICO_BW   = 128e9        # 128 GB/s, GDDR5 (8 Gbps x 128 bits)
+
+def eficiencia_banda(tempos_1000it):
+    ef = []
+    for i, t in enumerate(tempos_1000it):
+        t_iter  = t / 1000.0
+        trafego = 2 * N_pix[i]**2 * 4     # le 1x + escreve 1x, 4 bytes/pixel
+        bw      = trafego / t_iter
+        ef.append(bw / PICO_BW * 100)
+    return ef
+
+ef_global = eficiencia_banda(cuda_global)
+ef_shared = eficiencia_banda(cuda_shared)
+
+fig, ax = plt.subplots(figsize=(6.5, 4.5))
+xg = np.arange(len(sizes))
+ax.axhline(100, color='#aaaaaa', linestyle='--', linewidth=1.2, label='Pico (128 GB/s)')
+ax.plot(xg, ef_global, marker='D', color=CUDA_G_COLOR, linewidth=1.8,
+        markersize=6, label='CUDA global')
+ax.plot(xg, ef_shared, marker='v', color=CUDA_S_COLOR, linewidth=1.8,
+        markersize=6, label='CUDA shared')
+for x, y in zip(xg, ef_global):
+    ax.annotate(f'{y:.0f}%', (x, y), textcoords='offset points', xytext=(0, 7),
+                ha='center', fontsize=8.5, color=CUDA_G_COLOR)
+for x, y in zip(xg, ef_shared):
+    ax.annotate(f'{y:.0f}%', (x, y), textcoords='offset points', xytext=(0, -14),
+                ha='center', fontsize=8.5, color=CUDA_S_COLOR)
+ax.set_xlabel('Tamanho da imagem')
+ax.set_ylabel('Eficiência de banda (% do pico)')
+ax.set_title('Eficiência de banda de memória da GPU (estimativa, piso)')
+ax.set_xticks(xg)
+ax.set_xticklabels(sizes)
+ax.set_ylim(0, 110)
+ax.legend(loc='lower left')
+ax.grid(True, linestyle='--', alpha=0.4)
+plt.tight_layout()
+plt.savefig('figuras/eficiencia_banda_gpu.pdf', bbox_inches='tight')
+plt.close()
+
 print('Graficos gerados em figuras/')

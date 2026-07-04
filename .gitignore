@@ -9,6 +9,9 @@ HANDOFF.md
 OpenMP/Relatorio/Makefile
 resultados_i5-11300h.txt
 
+# Slides da Etapa 3 (rascunho, nao versionado)
+CUDA/Relatorio/slides.*
+
 # Binarios compilados (gerados por make)
 MPI/mpi
 OpenMP/serial
