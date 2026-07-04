@@ -188,5 +188,6 @@ Na Etapa 3, as **quatro** implementações (serial, OpenMP, MPI e CUDA) foram re
 
 Declaro que este projeto contou com o auxílio da ferramenta de IA **Claude (Anthropic)** exclusivamente para as tarefas de depuração e estruturação das implementações (OpenMP, MPI e os kernels CUDA), resolução do conflito de toolchain entre o CUDA e o glibc do Ubuntu 26.04, discussão e interpretação dos resultados de desempenho, organização dos arquivos de análise e estruturação dos relatórios em LaTeX. Como autores, atestamos que revisamos, testamos e validamos criticamente todo o conteúdo gerado, assumindo total e exclusiva responsabilidade pela correção lógica do código, precisão dos relatórios de desempenho e integridade acadêmica do material entregue.
 
+
 Lucas Luige Costa Miranda — 04 de julho de 2026
 Henrique Cerqueira Fadigas — 04 de julho de 2026
