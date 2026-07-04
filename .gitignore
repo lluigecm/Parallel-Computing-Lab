@@ -1,4 +1,5 @@
 .claude
+HANDOFF.md
 *.fls
 *.fdb_latexmk
 *.tex
@@ -13,6 +14,13 @@ OpenMP/serial
 OpenMP/openmp
 OpenMP/tiling
 CUDA/cuda
+
+# Imagens de teste geradas (gerarImagens.py) e saidas de benchmark
+image_*.png
+output_*.png
+
+# Instaladores baixados manualmente (ex: CUDA keyring)
+*.deb
 
 # Prerequisites
 *.d

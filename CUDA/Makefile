@@ -1,6 +1,8 @@
 NVCC   = nvcc
 # sm_75 = arquitetura Turing (GTX 1650). Ajuste se rodar em outra GPU.
-NVFLAGS = -O2 -arch=sm_75
+# -U_GNU_SOURCE: evita conflito do glibc novo (2.43+) nas extensoes rsqrt/cospi/sinpi
+# declaradas com noexcept diferente do que o CUDA math_functions.h espera.
+NVFLAGS = -O2 -arch=sm_75 -Xcompiler -U_GNU_SOURCE
 
 all: cuda
 
